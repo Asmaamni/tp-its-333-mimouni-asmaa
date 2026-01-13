@@ -4,9 +4,6 @@ app = Flask(__name__)
 
 ## EXO1: API GET: renvoyer un helloworld - API end point name: "api/salutation"
 
-from flask import Flask, jsonify
-
-app = Flask(__name__)
 
 @app.route('/api/salutation', methods=['GET'])
 def salutation():
@@ -15,9 +12,6 @@ def salutation():
 
 ## EXO2: API POST: renvoyer un nom fourni en parametre - API end point name: "api/utilisateurs"
 
-from flask import Flask, jsonify, request
-
-app = Flask(__name__)
 
 ## EXO1: API GET - Hello World
 @app.route('/api/salutation', methods=['GET'])
@@ -36,8 +30,6 @@ def creer_utilisateur():
     nom = data['nom']
     return jsonify(message=f"Bonjour {nom}")
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
 # to be tested with curl: 
 # >> curl -i -X GET http://localhost:5000/api/salutation
